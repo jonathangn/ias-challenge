@@ -11,10 +11,6 @@ CREATE TABLE loan_requests (
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     processed_at TIMESTAMP,
 
-    CONSTRAINT fk_loan_requests_customer
-    FOREIGN KEY (client_code)
-    REFERENCES clients(client_code),
-
     CONSTRAINT chk_loan_request_status
         CHECK (status IN ('PENDING', 'APPROVED', 'REJECTED'))
 );
