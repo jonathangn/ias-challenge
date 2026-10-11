@@ -30,6 +30,8 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-data-r2dbc-test'
 	testImplementation 'org.springframework.boot:spring-boot-starter-flyway-test'
 	testImplementation 'org.springframework.boot:spring-boot-starter-webflux-test'
+	testImplementation platform('org.testcontainers:testcontainers-bom:1.21.3')
+	testImplementation 'org.testcontainers:postgresql'
 	testCompileOnly 'org.projectlombok:lombok'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 	testAnnotationProcessor 'org.projectlombok:lombok'
